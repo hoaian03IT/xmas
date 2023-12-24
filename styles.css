@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #001f00;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+}
+@keyframes slide {
+    0% {
+        left: -50%;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: -50%;
+    }
+}
+
+.text-xmas {
+    padding: 10px 20px;
+    font-family: "Pacifico", cursive;
+    position: absolute;
+    top: 20px;
+    display: flex;
+    align-content: center;
+    background-image: linear-gradient(90deg, #e66465, rgb(255, 246, 160));
+    border-radius: 21px 20px 32px 79px;
+    z-index: 3;
+    animation: slide 20s ease-in-out infinite;
+}
+
+.text-xmas .char {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.text-xmas img {
+    height: 80px;
+    transform: rotateY(180deg);
+}
+
+.light:nth-of-type(1) {
+    position: absolute;
+    font-size: 30px;
+    color: transparent;
+    transform: translate(0px, 150px);
+    z-index: 5;
+}
+
+.light:nth-of-type(2) {
+    position: absolute;
+    font-size: 30px;
+    color: transparent;
+    transform: translate(60px, 165px);
+    z-index: 2;
+}
+
+.light:nth-of-type(3) {
+    position: absolute;
+    font-size: 30px;
+    color: transparent;
+    transform: translate(130px, 170px);
+    z-index: 2;
+}
+
+.light:nth-of-type(4) {
+    position: absolute;
+    font-size: 30px;
+    color: transparent;
+    transform: translate(190px, 170px);
+    z-index: 2;
+}
+
+.light1:nth-of-type(1) {
+    position: absolute;
+    font-size: 30px;
+    color: transparent;
+    transform: translate(200px, 150px);
+    z-index: 5;
+}
+
+.light1:nth-of-type(2) {
+    position: absolute;
+    font-size: 30px;
+    color: transparent;
+    transform: translate(150px, 160px);
+    z-index: 2;
+}
+
+.light1:nth-of-type(3) {
+    position: absolute;
+    font-size: 30px;
+    color: transparent;
+    transform: translate(80px, 165px);
+    z-index: 2;
+}
+
+.light1:nth-of-type(4) {
+    position: absolute;
+    font-size: 30px;
+    color: transparent;
+    transform: translate(0px, 170px);
+    z-index: 2;
+}
+
+.tree {
+    position: relative;
+    height: 450px;
+    width: 450px;
+}
+
+.tree::before {
+    position: absolute;
+    content: "";
+    bottom: -70px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tree::after {
+    position: absolute;
+    content: "";
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 40px;
+    background-color: #663300;
+}
+
+.tree div.left {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    display: flex;
+}
+
+.tree div.left:nth-child(2) {
+    transform: translateY(-100px) scale(0.8);
+    z-index: 1;
+}
+
+.tree div.left:nth-child(3) {
+    transform: translateY(-190px) scale(0.6);
+    z-index: 1;
+}
+
+.tree div.left:nth-child(4) {
+    transform: translateY(-260px) scale(0.4);
+    z-index: 1;
+}
+
+.tree div.left:nth-child(5) {
+    transform: translateY(-300px) scale(0.2);
+    z-index: 1;
+}
+
+@keyframes doimau {
+    0% {
+        color: yellow;
+    }
+    100% {
+        color: red;
+    }
+}
+
+.star {
+    position: absolute;
+    left: 50%;
+    transform: translate(-27px, -20px);
+    font-size: 50px;
+    animation: doimau 0.2s ease-in-out infinite;
+}
+
+.tree div.left span {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.tree div.left span:nth-child(1)::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-image: linear-gradient(360deg, #00ff00, #00b900);
+    border-radius: 100% 0% 0 100% / 100% 0% 0 19%;
+}
+
+.tree div.left span:nth-child(2)::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background-image: linear-gradient(360deg, #00ff00, #00b900);
+    border-radius: 0% 100% 100% 0% / 0% 100% 19% 0%;
+}
+
+.snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.snow .snow1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./snow.png");
+    z-index: 1000;
+    mix-blend-mode: screen;
+    animation: animation 2s linear infinite;
+}
+
+.snow .snow2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./snow.png");
+    z-index: 1000;
+    mix-blend-mode: screen;
+    animation: animation 5s linear infinite;
+    transform: scale(1);
+    filter: blur();
+}
+
+.snow .snow2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./snow.png");
+    z-index: 1000;
+    mix-blend-mode: screen;
+    animation: animation 5s linear infinite;
+    transform: scale(1.5);
+}
+
+@keyframes animation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 506px;
+    }
+}
+
+/* firework */
+
+html,
+body {
+    height: 100%;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.screen {
+    width: inherit;
+    height: inherit;
+    background-color: #000000;
+    position: relative;
+}
+
+.fireG {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 200px;
+}
+
+.fireCrBr {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: inherit;
+    height: inherit;
+    transform: rotate(calc((360deg / var(--bars)) * var(--barNumber)));
+}
+
+.fireCr {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 20px;
+    height: 20px;
+    color: inherit;
+    background-color: currentColor;
+    border-radius: 50%;
+    filter: drop-shadow(0px 4px 15px currentColor);
+    transform: translateY(calc(100% * 10));
+    transition: 0.3s linear;
+    opacity: 0;
+}
+.fireG.fired .fireCr {
+    animation: fireWork 2s linear var(--animationDelay, 0s) 1 forwards;
+}
+
+@keyframes fireWork {
+    0% {
+        transform: translateY(calc(30% * 10));
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(calc(-60% * 10));
+    }
+}
+
+.fireCr::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 400%;
+    background-color: currentColor;
+    filter: blur(44px);
+    clip-path: polygon(0% 0%, 100% 0%, 60% 100%, 40% 100%);
+}
