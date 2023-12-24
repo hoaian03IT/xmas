@@ -18,7 +18,7 @@
             <i class="heart fa-solid fa-heart"></i>
             <i class="heart fa-solid fa-heart"></i>
             <i class="heart fa-solid fa-heart"></i>
-            <div class="text">Nhấn vào là có quà nè</div>
+            <div class="text">Nhấn vào hộp quà nè</div>
         </div>
         <div class="text-xmas">
             <span class="char">M</span>
@@ -113,10 +113,11 @@
                 <i class="fa-solid fa-star"></i>
             </div>
         </div>
-        <audio class="audio" autoplay loop>
-            <source src="nhacvui.mp3" type="audio/mp3" />
+
+        <audio class="audio" loop>
+            <source src="nhacvui.mp3" type="audio/mp3" --autoplay-policy="no-user-gesture-required" />
         </audio>
-        <iframe src="nhacvui.mp3" allow="autoplay" style="display: none" id="iframeAudio"> </iframe>
+
         <!-- <div class="screen"> -->
         <div class="fireG" style="--bars: 18">
             <div class="fireCrBr" style="--barNumber: 1">
