@@ -120,11 +120,10 @@ closeIcon.classList.add("fa-solid");
 closeIcon.classList.add("fa-xmark");
 closeIcon.classList.add("icon-close");
 
-modal.appendChild(closeIcon);
-
 let i = 0;
 $(".gift").onclick = () => {
     $(".audio").play();
+    modal.appendChild(closeIcon);
     document.body.appendChild(modal);
     if (i === 0) {
         modal.classList.add("modal");
@@ -163,11 +162,3 @@ closeIcon.onclick = function () {
     $(".fade").style.display = "none";
     if (i < 4) text.textContent = `Còn ${4 - i} món quà đang chờ đợi`;
 };
-
-// var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-// if (!isChrome) {
-//     $("#iframeAudio").remove();
-// } else {
-//     $(".audio").remove(); // just to make sure that it will not have 2x audio in the background
-// }
-console.log();
