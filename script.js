@@ -1,9 +1,5 @@
 const $ = document.querySelector.bind(document);
 
-const audio = $(".audio");
-
-audio.volume = 0.05;
-
 let fireScreen = document.querySelector(".screen");
 
 let screen_width = window.innerWidth;
